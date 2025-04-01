@@ -18,17 +18,34 @@ if not deals:
 # Build HTML blocks
 html_blocks = []
 for deal in deals:
+    title = deal.get('title', 'Untitled')
+    type_ = deal.get('type') or deal.get('platform', '')
+    description = deal.get('description', '')
+    discount_price = deal.get('discount_price') or deal.get('deal_price', '')
+    original_price = deal.get('original_price', '')
+    discount_percent = deal.get('discount_percent', '')
+    tags = ', '.join(deal.get('tags', []))
+    deal_url = deal.get('url') or deal.get('deal_url', '#')
+    #image_url = deal.get('image_url') or "https://via.placeholder.com/800x300?text=No+Image"
+    image_url = deal.get('image_url', '').strip()
+    if not image_url:
+        if "udemy.com/course/" in deal.get('url', ''):
+            image_url = "https://img-c.udemycdn.com/course/480x270/default_course_image.jpg"
+        else:
+            image_url = "https://via.placeholder.com/800x300?text=No+Image"
+
+    
     html_blocks.append(f"""
     <div class="deal-card">
-        <img src="{deal.get('image_url', '')}" alt="{deal.get('title', 'Untitled')}" class="deal-img" />
-        <h2>{deal.get('title', 'Untitled')}</h2>
-        <p><strong>{deal.get('type', deal.get('platform', ''))}</strong></p>
-        <p>{deal.get('description', '')}</p>
-        <p><strong>Price:</strong> {deal.get('discount_price', deal.get('deal_price', 'N/A'))} 
-            {"<del>" + deal.get('original_price', '') + "</del>" if deal.get('original_price') else ''}</p>
-        <p><strong>Discount:</strong> {deal.get('discount_percent', '')}%</p>
-        <a href="{deal.get('url', deal.get('deal_url', '#'))}" target="_blank">Check Deal →</a>
-        <p class="tags">{', '.join(deal.get('tags', []))}</p>
+        <img src="{image_url}" alt="{title}" class="deal-img" />
+        <h2>{title}</h2>
+        <p><strong>{type_}</strong></p>
+        <p>{description}</p>
+        <p><strong>Price:</strong> {discount_price} 
+            {"<del>" + original_price + "</del>" if original_price else ''}</p>
+        <p><strong>Discount:</strong> {str(discount_percent) + "%" if discount_percent else "–"}</p>
+        <a href="{deal_url}" target="_blank">Check Deal →</a>
+        <p class="tags">{tags}</p>
     </div>
     """)
 
@@ -42,6 +59,7 @@ html_output = f"""
     <style>
         body {{ font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }}
         h1 {{ color: #2b2b2b; }}
+        .last-updated {{ font-size: 0.85em; color: #666; margin-top: -12px; margin-bottom: 20px; }}
         .deal-card {{ border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }}
         .deal-img {{ max-width: 100%; height: auto; border-radius: 8px; }}
         .tags {{ font-size: 0.85em; color: #555; margin-top: 10px; }}
@@ -50,6 +68,7 @@ html_output = f"""
 </head>
 <body>
     <h1>🧠 Top AI Tool & Course Deals – {datetime.now().strftime("%B %d, %Y")}</h1>
+    <p class="last-updated">Last updated: {datetime.now().strftime('%B %d, %Y – %H:%M')}</p>
     {''.join(html_blocks)}
 </body>
 </html>

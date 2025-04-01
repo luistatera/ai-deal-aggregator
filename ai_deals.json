@@ -1,41 +1,50 @@
 [
   {
-  "title": "Artificial Intelligence A-Z 2024: Build 7 AI + LLM & ChatGPT",
-  "discount_price": "$12.99",
-  "original_price": "$199.99",
-  "discount_percent": "93%",
-  "platform": "Udemy",
-  "url": "https://www.udemy.com/course/artificial-intelligence-az/",
-  "description": "Comprehensive AI course covering reinforcement learning, deep Q-learning, large language models (LLMs) like ChatGPT, with hands-on projects.",
-  "tags": ["AI", "LLM", "ChatGPT", "Deep Learning"],
-  "instructor": "Hadelin de Ponteves, Kirill Eremenko",
-  "rating": 4.3
+    "title": "Highperformr Pro",
+    "description": "AI-powered social media management platform with content creation, scheduling and analytics",
+    "discount_price": "$59",
+    "original_price": "$216",
+    "discount_percent": "73%",
+    "platform": "Highperformr",
+    "url": "https://www.highperformr.ai",
+    "image_url": "",
+    "tags": ["AI", "lifetime deal", "social media", "content creation"],
+    "hotness_score": "8"
   },
   {
-  "title": "Complete A.I. & Machine Learning, Data Science Bootcamp",
-  "discount_price": "$11.99",
-  "original_price": "$199.99",
-  "discount_percent": "94%",
-  "platform": "Udemy",
-  "url": "https://www.udemy.com/course/ai-machine-learning-data-science-bootcamp/",
-  "description": "Practical bootcamp covering machine learning, data science, neural networks and TensorFlow with real-world projects.",
-  "tags": ["AI", "Machine Learning", "Data Science", "TensorFlow"],
-  "instructor": "Mammoth Interactive",
-  "rating": 4.5
+    "title": "Writecream",
+    "description": "AI writing assistant with 40+ tools for blogs, emails, social media and ad copies",
+    "discount_price": "$59",
+    "original_price": "$1440",
+    "discount_percent": "96%",
+    "platform": "Writecream",
+    "url": "https://www.writecream.com",
+    "image_url": "",
+    "tags": ["AI", "lifetime deal", "writing", "content creation"],
+    "hotness_score": "9"
   },
   {
-  "title": "Tensorflow 2.0: Deep Learning and Artificial Intelligence",
-  "discount_price": "$12.99",
-  "original_price": "$199.99",
-  "discount_percent": "93%",
-  "platform": "Udemy",
-  "url": "https://www.udemy.com/course/deep-learning-tensorflow-2/",
-  "description": "Master TensorFlow 2.0 for deep learning applications including CNNs, RNNs, NLP, GANs and reinforcement learning.",
-  "tags": ["TensorFlow", "Deep Learning", "Neural Networks", "AI"],
-  "instructor": "Lazy Programmer Team",
-  "rating": 4.5
+    "title": "FlexClip",
+    "description": "AI video editing platform with 5000+ templates and automated video creation tools",
+    "discount_price": "$69",
+    "original_price": "$400",
+    "discount_percent": "83%",
+    "platform": "FlexClip",
+    "url": "https://www.flexclip.com",
+    "image_url": "",
+    "tags": ["AI", "lifetime deal", "video editing", "marketing"],
+    "hotness_score": "7"
+  },
+  {
+    "title": "Pickaxe",
+    "description": "No-code platform to build, deploy and monetize AI tools using large language models",
+    "discount_price": "$49",
+    "original_price": "$100",
+    "discount_percent": "51%",
+    "platform": "Pickaxe",
+    "url": "https://www.pickaxeproject.com",
+    "image_url": "",
+    "tags": ["AI", "lifetime deal", "no-code", "app builder"],
+    "hotness_score": "8"
   }
-  ]
-  
-  
-  
+]
