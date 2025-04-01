@@ -1,0 +1,37 @@
+name: Daily AI Deals Update
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Runs daily at 6AM UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install requirements (if needed)
+        run: pip install -r requirements.txt || true
+
+      - name: Run Cline to get fresh deals
+        run: |
+          npx cline ai-deals-daily.cline > ai_deals.json
+
+      - name: Generate HTML from JSON
+        run: python process_ai_deals.py
+
+      - name: Commit and push updated site
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add docs/index.html
+          git commit -m "🤖 Daily AI deal update - $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push

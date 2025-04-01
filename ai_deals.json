@@ -1,29 +1,41 @@
 [
-    {
-      "title": "Notion AI",
-      "type": "AI Productivity Tool",
-      "description": "Write better, faster with AI-powered note-taking and doc editing.",
-      "deal_price": "$8/month",
-      "original_price": "$10/month",
-      "discount_percent": 20,
-      "source": "Notion",
-      "deal_url": "https://www.notion.so/product/ai",
-      "image_url": "https://www.notion.so/cdn-cgi/image/format=auto,width=800,quality=100/front-static/pages/homepage/hero.png",
-      "tags": ["AI", "note-taking", "writing"],
-      "hotness_score": 9
-    },
-    {
-      "title": "Prompt Engineering for ChatGPT",
-      "type": "Online Course",
-      "description": "Master prompt engineering to build AI-powered applications.",
-      "deal_price": "$11.99",
-      "original_price": "$84.99",
-      "discount_percent": 86,
-      "source": "Udemy",
-      "deal_url": "https://www.udemy.com/course/prompt-engineering-for-chatgpt/",
-      "image_url": "https://img-c.udemycdn.com/course/480x270/5185098_2c35_4.jpg",
-      "tags": ["course", "GPT-4", "development"],
-      "hotness_score": 10
-    }
+  {
+  "title": "Artificial Intelligence A-Z 2024: Build 7 AI + LLM & ChatGPT",
+  "discount_price": "$12.99",
+  "original_price": "$199.99",
+  "discount_percent": "93%",
+  "platform": "Udemy",
+  "url": "https://www.udemy.com/course/artificial-intelligence-az/",
+  "description": "Comprehensive AI course covering reinforcement learning, deep Q-learning, large language models (LLMs) like ChatGPT, with hands-on projects.",
+  "tags": ["AI", "LLM", "ChatGPT", "Deep Learning"],
+  "instructor": "Hadelin de Ponteves, Kirill Eremenko",
+  "rating": 4.3
+  },
+  {
+  "title": "Complete A.I. & Machine Learning, Data Science Bootcamp",
+  "discount_price": "$11.99",
+  "original_price": "$199.99",
+  "discount_percent": "94%",
+  "platform": "Udemy",
+  "url": "https://www.udemy.com/course/ai-machine-learning-data-science-bootcamp/",
+  "description": "Practical bootcamp covering machine learning, data science, neural networks and TensorFlow with real-world projects.",
+  "tags": ["AI", "Machine Learning", "Data Science", "TensorFlow"],
+  "instructor": "Mammoth Interactive",
+  "rating": 4.5
+  },
+  {
+  "title": "Tensorflow 2.0: Deep Learning and Artificial Intelligence",
+  "discount_price": "$12.99",
+  "original_price": "$199.99",
+  "discount_percent": "93%",
+  "platform": "Udemy",
+  "url": "https://www.udemy.com/course/deep-learning-tensorflow-2/",
+  "description": "Master TensorFlow 2.0 for deep learning applications including CNNs, RNNs, NLP, GANs and reinforcement learning.",
+  "tags": ["TensorFlow", "Deep Learning", "Neural Networks", "AI"],
+  "instructor": "Lazy Programmer Team",
+  "rating": 4.5
+  }
   ]
+  
+  
   
