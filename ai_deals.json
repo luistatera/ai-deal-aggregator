@@ -1,0 +1,29 @@
+[
+    {
+      "title": "Notion AI",
+      "type": "AI Productivity Tool",
+      "description": "Write better, faster with AI-powered note-taking and doc editing.",
+      "deal_price": "$8/month",
+      "original_price": "$10/month",
+      "discount_percent": 20,
+      "source": "Notion",
+      "deal_url": "https://www.notion.so/product/ai",
+      "image_url": "https://www.notion.so/cdn-cgi/image/format=auto,width=800,quality=100/front-static/pages/homepage/hero.png",
+      "tags": ["AI", "note-taking", "writing"],
+      "hotness_score": 9
+    },
+    {
+      "title": "Prompt Engineering for ChatGPT",
+      "type": "Online Course",
+      "description": "Master prompt engineering to build AI-powered applications.",
+      "deal_price": "$11.99",
+      "original_price": "$84.99",
+      "discount_percent": 86,
+      "source": "Udemy",
+      "deal_url": "https://www.udemy.com/course/prompt-engineering-for-chatgpt/",
+      "image_url": "https://img-c.udemycdn.com/course/480x270/5185098_2c35_4.jpg",
+      "tags": ["course", "GPT-4", "development"],
+      "hotness_score": 10
+    }
+  ]
+  
