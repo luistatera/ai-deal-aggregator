@@ -20,14 +20,14 @@ html_blocks = []
 for deal in deals:
     html_blocks.append(f"""
     <div class="deal-card">
-        <img src="{deal.get('image_url', '')}" alt="{deal['title']}" class="deal-img" />
-        <h2>{deal['title']}</h2>
-        <p><strong>{deal['type']}</strong></p>
+        <img src="{deal.get('image_url', '')}" alt="{deal.get('title', 'Untitled')}" class="deal-img" />
+        <h2>{deal.get('title', 'Untitled')}</h2>
+        <p><strong>{deal.get('type', deal.get('platform', ''))}</strong></p>
         <p>{deal.get('description', '')}</p>
-        <p><strong>Price:</strong> {deal.get('deal_price', 'N/A')} 
-            {"<del>" + deal['original_price'] + "</del>" if deal.get('original_price') else ''}</p>
+        <p><strong>Price:</strong> {deal.get('discount_price', deal.get('deal_price', 'N/A'))} 
+            {"<del>" + deal.get('original_price', '') + "</del>" if deal.get('original_price') else ''}</p>
         <p><strong>Discount:</strong> {deal.get('discount_percent', '')}%</p>
-        <a href="{deal['deal_url']}" target="_blank">Check Deal →</a>
+        <a href="{deal.get('url', deal.get('deal_url', '#'))}" target="_blank">Check Deal →</a>
         <p class="tags">{', '.join(deal.get('tags', []))}</p>
     </div>
     """)
